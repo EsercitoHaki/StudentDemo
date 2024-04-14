@@ -1,4 +1,5 @@
 package studentdemo;
+import View.JFStudent;
 import javax.swing.JFrame;
 public class StudentDemo {
 

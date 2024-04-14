@@ -1,4 +1,4 @@
-package studentdemo;
+package View;
 
 import java.awt.Color;
 import java.util.List;
@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Locale;
 import javax.swing.table.DefaultTableModel;
+import Model.Student;
 
 public class JFStudent extends javax.swing.JPanel {
     List<Student> list = new ArrayList<Student>();
@@ -18,9 +19,9 @@ public class JFStudent extends javax.swing.JPanel {
     public JFStudent() {
         initComponents();
         this.jLabel1.setBackground(Color.LIGHT_GRAY);
-        list.add(new Student(0201366, "Phạm Công Quân", "66PM6", "Thanh Hoá", "10/09/2003", "Nam"));
-        list.add(new Student(0201366, "An Đăng Vinh", "66PM6", "Thanh Hoá", "10/09/2003", "Nam"));
-        list.add(new Student(0201366, "Nguyễn Anh Tú", "66PM6", "Thanh Hoá", "10/09/2003", "Nam"));
+        list.add(new Student(0201366, "Nguyễn Anh Tú", "66PM5", "Hà Nội", "10/09/2003", "Nam"));
+        list.add(new Student(0201366, "An Đăng Vinh", "66PM5", "Hải Dương", "10/09/2003", "Nam"));
+        list.add(new Student(0201366, "Nguyễn Thành Trung", "66PM6", "Hà Nội", "10/09/2003", "Nam"));
         
         //View();
         ViewTable();
