@@ -10,10 +10,16 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Locale;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.ButtonGroup;
+import javax.swing.plaf.FontUIResource;
 import Model.Student;
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.UIManager;
 
 public class JFStudent extends javax.swing.JPanel {
     List<Student> list = new ArrayList<Student>();
+    private ButtonGroup gioiTinhGroup;
     Student sv;
     private static int pos = 0;
     public JFStudent() {
@@ -22,7 +28,10 @@ public class JFStudent extends javax.swing.JPanel {
         list.add(new Student(0201366, "Nguyễn Anh Tú", "66PM5", "Hà Nội", "10/09/2003", "Nam"));
         list.add(new Student(0201366, "An Đăng Vinh", "66PM5", "Hải Dương", "10/09/2003", "Nam"));
         list.add(new Student(0201366, "Nguyễn Thành Trung", "66PM6", "Hà Nội", "10/09/2003", "Nam"));
-        
+        gioiTinhGroup = new ButtonGroup();
+        // Thêm các radio button vào ButtonGroup
+        gioiTinhGroup.add(rbtn_Nam);
+        gioiTinhGroup.add(rbtn_Nu);
         //View();
         ViewTable();
         showComboLopQL();
@@ -369,17 +378,28 @@ public class JFStudent extends javax.swing.JPanel {
             return;
         }
 
-        // Cập nhật thông tin của sinh viên trong danh sách
         list.set(selectedRow, new Student(maSV, tenSV, lopQL, queQuan, ngaySinh, gioiTinh));
 
-        // Cập nhật lại bảng
         ViewTable();
     }//GEN-LAST:event_btn_SuaActionPerformed
 
     private void btn_XoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XoaActionPerformed
-        list.remove(pos);
-        View();
-        ViewTable();
+        UIManager.put("OptionPane.messageFont", new FontUIResource(new Font("Arial", Font.BOLD, 20)));
+        int n = JOptionPane.showConfirmDialog(this, "Bạn có muốn xoá không ?", "Alert", JOptionPane.YES_NO_OPTION);
+        if(n == JOptionPane.YES_OPTION)
+        {
+            list.remove(pos);
+            if(pos > list.size()-1)
+            {
+                pos = pos -1;
+            }
+            if(pos < 0)
+            {
+                pos = 0;
+            }
+            View();
+            ViewTable();
+        }
     }//GEN-LAST:event_btn_XoaActionPerformed
 
 
