@@ -116,7 +116,6 @@ public class JFStudent extends javax.swing.JPanel {
         btn_Sua = new javax.swing.JButton();
         btn_Them1 = new javax.swing.JButton();
         btn_Xoa = new javax.swing.JButton();
-        btn_Huy = new javax.swing.JButton();
         txt_MaSV = new javax.swing.JTextField();
         rbtn_Nam = new javax.swing.JRadioButton();
 
@@ -232,9 +231,6 @@ public class JFStudent extends javax.swing.JPanel {
             }
         });
 
-        btn_Huy.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btn_Huy.setText("Huỷ");
-
         txt_MaSV.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         rbtn_Nam.setText("Nam");
@@ -256,31 +252,33 @@ public class JFStudent extends javax.swing.JPanel {
                             .addComponent(txt_TenSV)
                             .addComponent(cbb_LopQL, 0, 136, Short.MAX_VALUE)
                             .addComponent(txt_MaSV))
-                        .addGap(306, 306, 306)
+                        .addGap(306, 306, 306))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(btn_Them1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_Sua)
+                        .addGap(125, 125, 125)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6)
                             .addComponent(jLabel7))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(53, 53, 53)
+                                .addComponent(cbb_QueQuan, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                    .addComponent(rbtn_Nam)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(rbtn_Nu))
+                                .addComponent(txt_NgaySinh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(btn_Them1)
-                        .addGap(75, 75, 75)
-                        .addComponent(btn_Sua)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_Xoa)
-                        .addGap(89, 89, 89)))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_Huy)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(cbb_QueQuan, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                            .addComponent(rbtn_Nam)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rbtn_Nu))
-                        .addComponent(txt_NgaySinh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addGap(73, 73, 73)
+                        .addComponent(btn_Xoa)))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,8 +306,7 @@ public class JFStudent extends javax.swing.JPanel {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_Sua)
                     .addComponent(btn_Them1)
-                    .addComponent(btn_Xoa)
-                    .addComponent(btn_Huy))
+                    .addComponent(btn_Xoa))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -404,7 +401,6 @@ public class JFStudent extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Huy;
     private javax.swing.JButton btn_Sua;
     private javax.swing.JButton btn_Them1;
     private javax.swing.JButton btn_Xoa;
